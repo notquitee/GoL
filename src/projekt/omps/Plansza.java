@@ -12,7 +12,7 @@ public class Plansza {
             }
         }
     }
-    public void changeFieldValue(int i,int j){
+    public void changeCellValue(int i, int j){
         tablica[i][j] = !tablica[i][j];
     }
     public void display(){
@@ -25,6 +25,7 @@ public class Plansza {
             }
             System.out.print("\n");
         }
+        System.out.println("\n");
     }
     public int countNeighbours(int w,int k){
         int n=0;
@@ -36,5 +37,11 @@ public class Plansza {
         }
         return n;
     }
-}
+    public boolean getCellValue(int w,int k){
+        return tablica[w][k];
+    }
+    public boolean[][] getTablica(){
+        return tablica;
+    }
 
+}
