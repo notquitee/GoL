@@ -4,7 +4,7 @@ package projekt.omps;
  * Created by not_quite on 2014-11-12.
  */
 public class Plansza {
-    private boolean[][] tablica = new boolean[6][10];
+    private boolean[][] tablica = new boolean[9][11];
     public Plansza(){
         for (int i=0; i<tablica.length; i++) {
             for (int j = 0; j < tablica[i].length; j++) {
@@ -42,6 +42,10 @@ public class Plansza {
     }
     public boolean[][] getTablica(){
         return tablica;
+    }
+    public void setTablica(boolean[][] newTablica) {
+        for (int i = 0; i<newTablica.length; i++)
+            tablica[i] = newTablica[i].clone();
     }
 
 }
