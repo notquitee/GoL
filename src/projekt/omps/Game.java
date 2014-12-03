@@ -1,4 +1,5 @@
 package projekt.omps;
+import java.awt.event.KeyListener;
 import java.lang.*;
 
 /**
@@ -8,9 +9,11 @@ public class Game {
     private Plansza gra;
     private boolean[][] nextStep = new boolean[9][11];
     public Counter stepCounter;
+    private boolean stop;
     public Game(){
         gra = new Plansza();
         stepCounter = new Counter();
+        stop = false;
         for (int i=0; i< nextStep.length; i++) {
             for (int j = 0; j < nextStep[i].length; j++) {
                 nextStep[i][j] = false;
@@ -39,6 +42,15 @@ public class Game {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            }
+        }
+    }
+    public void gameOn(){
+        stop = false;
+        while(!stop) {
+            step(1);
+            if (stepCounter.getCount() == 11) {
+                stop = true;
             }
         }
     }

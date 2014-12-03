@@ -13,7 +13,7 @@ public class Main {
         gameOfLife.changeCellValue(4,6);
         gameOfLife.changeCellValue(5,5);
         gameOfLife.display();
-        gameOfLife.step(10);
+        gameOfLife.gameOn();
 
     }
 }
