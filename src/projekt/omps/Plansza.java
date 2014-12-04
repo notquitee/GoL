@@ -25,7 +25,8 @@ public class Plansza {
             }
             System.out.print("\n");
         }
-        System.out.println("\n\n");
+        System.out.print("\n");
+
     }
     public int countNeighbours(int w,int k){
         int n=0;

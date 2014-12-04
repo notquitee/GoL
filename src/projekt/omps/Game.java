@@ -39,6 +39,7 @@ public class Game {
             gra.setTablica(nextStep);
             stepCounter.increment();
             gra.display();
+            System.out.println(stepCounter.getCount()+"\n");
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
