@@ -1,5 +1,6 @@
 package projekt.omps;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,6 +15,8 @@ public class Main {
         gameOfLife.changeCellValue(5,5);
         gameOfLife.display();
         gameOfLife.gameOn();
+
+
 
     }
 }

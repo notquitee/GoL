@@ -1,6 +1,7 @@
 package projekt.omps;
-import java.awt.event.KeyListener;
+
 import java.lang.*;
+
 
 /**
  * Created by student18 on 2014-11-13.
@@ -9,11 +10,11 @@ public class Game {
     private Plansza gra;
     private boolean[][] nextStep = new boolean[9][11];
     public Counter stepCounter;
-    private boolean stop;
+    public boolean stop;
     public Game(){
         gra = new Plansza();
-        stepCounter = new Counter();
         stop = false;
+        stepCounter = new Counter();
         for (int i=0; i< nextStep.length; i++) {
             for (int j = 0; j < nextStep[i].length; j++) {
                 nextStep[i][j] = false;
